@@ -38,8 +38,13 @@
 }
 
 .row {
-  background-image: linear-gradient(to bottom right, #cac531, #f3f9a7);
+  background-image: linear-gradient(to bottom right, #000000, #434343);
   padding-left: 0px;
   padding-right: 0px;
-
+}
+.row h1 {
+  color: white;
+}
+.name {
+  color: white;
 }
