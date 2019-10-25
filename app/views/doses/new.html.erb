@@ -1,0 +1,23 @@
+<h1><%= @cocktail.name %></h1>
+
+<h3>Ingreients:</h3>
+<table>
+  <% @cocktail.doses.each do |dose| %>
+    <% if dose.description == "1" %>
+      <tr><td>1 dose of <%=dose.ingrdient.name %></td><td><%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Sure you want to delete?"} %></td></tr>
+    <% else %>
+      <tr><td><% dose.description %> doses of <%= dose.ingredient.name %></td><td><%= link_to "Delete", dose_path(dose), method: :delete, data: { confrim: "Are you sure?"} %></td></tr>
+    <% end %>
+  <% end %>
+</table>
+
+<h3>Add a dose:</h3>
+
+ <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :ingredient, collection: Ingredient.order(:name), prompt: "Pick one from list" %>
+      <%= f.input :description %>
+      <%= f.submit "Submit" %>
+      <% end %>
+
+
+<%= link_to "Go back", cocktails_path %>

@@ -1,0 +1,45 @@
+.container {
+}
+
+.drink-card {
+  margin-top: 50px;
+  height: 250px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  border: 3px solid #E9C73C;
+}
+
+.card-link {
+  position: absolute;
+  color: white;
+  background-color: #A0A0A0;
+  padding: 2px 5px;
+  border: 1px solid white;
+  border-radius: 30px;
+  margin-left: 40px;
+  font-size: 12px;
+}
+
+.card-link:hover {
+  color: black;
+  background-color: white;
+}
+
+.card-description h2 {
+  font-size: 24px;
+}
+
+.card-description {
+  bottom: 10px;
+  left: 10px;
+}
+
+.row {
+  background-image: linear-gradient(to bottom right, #d5eeff, #fbafaf);
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
